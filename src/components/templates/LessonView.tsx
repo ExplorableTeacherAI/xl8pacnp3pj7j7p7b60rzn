@@ -54,7 +54,7 @@ export const LessonView = ({ onEditSection }: LessonViewProps) => {
 
   return (
     <div className="flex flex-col h-full glass">
-      <Card className="flex-1 overflow-hidden bg-white no-border relative">
+      <Card className="flex-1 overflow-hidden bg-background border-none relative">
         {initialSections.length > 0 ? (
           <div className="relative w-full h-full">
             <SectionRenderer initialSections={initialSections} isPreview={isPreview} onEditSection={onEditSection} />
