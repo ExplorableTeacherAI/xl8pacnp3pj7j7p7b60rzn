@@ -23,9 +23,7 @@ export const sections: ReactElement[] = [
 
   // Section 2: Unit Rates
   <FullWidthLayout key="unit-rates" maxWidth="xl">
-    <Section id="unit-rates-wrapper" padding="lg">
-      <UnitRatesSection />
-    </Section>
+    <UnitRatesSection />
   </FullWidthLayout>,
 
   // Section 3: Percentages
