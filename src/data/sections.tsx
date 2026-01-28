@@ -1,8 +1,9 @@
 import { type ReactElement } from "react";
-import { FullWidthLayout, SplitLayout } from "@/components/layouts";
+import { FullWidthLayout } from "@/components/layouts";
 import { Section } from "@/components/templates";
 import { IntroToRatiosSection } from "./sections/IntroToRatios";
 import { UnitRatesSection } from "./sections/UnitRates";
+import { PercentagesSection } from "./sections/Percentages";
 
 /**
  * ------------------------------------------------------------------
@@ -18,10 +19,15 @@ export const sections: ReactElement[] = [
     <IntroToRatiosSection />
   </FullWidthLayout>,
 
-  // Section 2: Unit Rates (Split Layout)
+  // Section 2: Unit Rates
   <FullWidthLayout key="unit-rates" maxWidth="xl">
     <Section id="unit-rates-wrapper" padding="lg">
       <UnitRatesSection />
     </Section>
+  </FullWidthLayout>,
+
+  // Section 3: Percentages
+  <FullWidthLayout key="percentages" maxWidth="xl">
+    <PercentagesSection />
   </FullWidthLayout>,
 ];
