@@ -1,9 +1,10 @@
 import { type ReactElement } from "react";
-import { FullWidthLayout } from "@/components/layouts";
+import { FullWidthLayout, SplitLayout } from "@/components/layouts";
 import { Section } from "@/components/templates";
 import { IntroToRatiosSection } from "./sections/IntroToRatios";
 import { UnitRatesSection } from "./sections/UnitRates";
 import { PercentagesSection } from "./sections/Percentages";
+import { ProportionsExplanation, ProportionsCalculator } from "./sections/Proportions";
 
 /**
  * ------------------------------------------------------------------
@@ -30,4 +31,10 @@ export const sections: ReactElement[] = [
   <FullWidthLayout key="percentages" maxWidth="xl">
     <PercentagesSection />
   </FullWidthLayout>,
+
+  // Section 4: Proportions (Split Layout)
+  <SplitLayout key="proportions" ratio="1:1" gap="lg" align="start">
+    <ProportionsExplanation />
+    <ProportionsCalculator />
+  </SplitLayout>,
 ];
