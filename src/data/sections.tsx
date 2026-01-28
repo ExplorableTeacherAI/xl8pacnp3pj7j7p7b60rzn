@@ -1,10 +1,11 @@
 import { type ReactElement } from "react";
-import { FullWidthLayout, SplitLayout } from "@/components/layouts";
+import { FullWidthLayout, SplitLayout, GridLayout } from "@/components/layouts";
 import { Section } from "@/components/templates";
 import { IntroToRatiosSection } from "./sections/IntroToRatios";
 import { UnitRatesSection } from "./sections/UnitRates";
 import { PercentagesSection } from "./sections/Percentages";
 import { ProportionsExplanation, ProportionsCalculator } from "./sections/Proportions";
+import { ShoppingChallengeIntro, ShoppingChallengeCards } from "./sections/ShoppingChallenge";
 
 /**
  * ------------------------------------------------------------------
@@ -37,4 +38,14 @@ export const sections: ReactElement[] = [
     <ProportionsExplanation />
     <ProportionsCalculator />
   </SplitLayout>,
+
+  // Section 5: Shopping Challenge Intro
+  <FullWidthLayout key="challenge-intro" maxWidth="xl">
+    <ShoppingChallengeIntro />
+  </FullWidthLayout>,
+
+  // Section 5: Shopping Challenge Cards (Grid Layout)
+  <GridLayout key="challenge-cards" columns={2} gap="md">
+    <ShoppingChallengeCards />
+  </GridLayout>,
 ];
